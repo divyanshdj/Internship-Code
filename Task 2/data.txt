@@ -1,0 +1,20 @@
+{
+ Username: divyansh,
+ Email: demo@demo.com,
+ Password: password
+},
+{
+ Username: DDDDDDD,
+ Email: DDDDDD@GM.CO,
+ Password: 123121331
+},
+{
+ Username: ERERERER,
+ Email: ERERERER@ERER.ER,
+ Password: 123457
+},
+{
+ Username: ERERERER,
+ Email: ERERERER@ERER.ER,
+ Password:       
+},
