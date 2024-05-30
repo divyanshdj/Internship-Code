@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Finder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+      margin: 0;
+    }
+    #container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+    }
+    .input-field {
+      margin-bottom: 10px;
+    }
+    .input-field input {
+      padding: 10px;
+      width: calc(100% - 22px);
+      box-sizing: border-box;
+    }
+    .input-field button {
+      padding: 10px;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .input-field button:hover {
+      background-color: #0056b3;
+    }
+    #loading {
+      display: none;
+      margin-top: 10px;
+    }
+    #userInfo {
+      margin-top: 20px;
+      text-align: left;
+    }
+    #userInfo img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    #userInfo a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    #userInfo a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>GitHub User Finder</h1>
+    <div class="input-field">
+      <input type="text" id="username" placeholder="Enter GitHub Username">
+    </div>
+    <div class="input-field">
+      <button onclick="fetchUserInfo()">Get User Info</button>
+    </div>
+    <div id="loading">Loading...</div>
+    <div id="userInfo"></div>
+  </div>
+
+  <script>
+    async function fetchUserInfo() {
+      const username = document.getElementById('username').value;
+      if (!username) {
+        alert('Please enter a username');
+        return;
+      }
+
+      document.getElementById('loading').style.display = 'block';
+
+      const response = await fetch(`/user/${username}`);
+      const data = await response.json();
+      const userInfoDiv = document.getElementById('userInfo');
+
+      document.getElementById('loading').style.display = 'none';
+
+      if (response.ok) {
+        userInfoDiv.innerHTML = `
+          <img src="${data.avatar_url}" alt="${data.name}'s profile picture">
+          <h2>${data.name}</h2>
+          <p><strong>Username:</strong> ${data.login}</p>
+          <p><strong>Bio:</strong> ${data.bio}</p>
+          <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+          <p><strong>Followers:</strong> ${data.followers}</p>
+          <p><strong>Following:</strong> ${data.following}</p>
+          <p><a href="${data.html_url}" target="_blank">View Profile on GitHub</a></p>
+          ${data.blog ? `<p><a href="${data.blog}" target="_blank">Website/Blog</a></p>` : ''}
+          ${data.twitter_username ? `<p><a href="https://twitter.com/${data.twitter_username}" target="_blank">Twitter: @${data.twitter_username}</a></p>` : ''}
+        `;
+      } else {
+        userInfoDiv.innerHTML = `<p>Error: ${data.error}</p>`;
+      }
+    }
+  </script>
+</body>
+</html>
