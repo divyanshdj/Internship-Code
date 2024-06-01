@@ -5,3 +5,4 @@
 - Begginer Level - Task 1,2
 - Intermediate Level - Task 3,4
 - Advanced Level - Task 5
+- Expert Level - Task 7
