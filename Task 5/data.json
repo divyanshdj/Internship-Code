@@ -1,7 +1,17 @@
 [
   {
     "id": "1",
-    "name": "demo",
-    "age": "19"
+    "name": "Divyansh",
+    "age": "20"
+  },
+  {
+    "id": "2",
+    "name": "Sayyam",
+    "age": "21"
+  },
+  {
+    "id": "3",
+    "name": "Harsh",
+    "age": "23"
   }
 ]

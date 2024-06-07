@@ -21,7 +21,7 @@ body {
     padding: 20px;
     width: 100%;
     max-width: 700px;
-    margin: 0 auto; /* Ensure centering */
+    margin: 0 auto; 
 }
 
 .form-box {
@@ -32,7 +32,7 @@ body {
 }
 
 .title {
-    font-size: 2.5rem; /* Increased font size */
+    font-size: 2.5rem; 
     margin-bottom: 20px;
     text-align: center;
     color: #333;
@@ -47,17 +47,17 @@ body {
     margin-bottom: 5px;
     font-weight: bold;
     color: #333;
-    font-size: 1.125rem; /* Increased font size */
+    font-size: 1.125rem; 
 }
 
 .input-field {
     font-family: "Poppins", sans-serif;
     width: 100%;
-    padding: 12px; /* Increased padding */
+    padding: 12px; 
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 1.125rem; /* Increased font size */
-    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-size: 1.125rem; 
+    box-sizing: border-box; 
 }
 
 .input-field:focus {
@@ -68,15 +68,15 @@ body {
 .error-message {
     font-family: "Poppins", sans-serif;
     color: #ff0000;
-    font-size: 1rem; /* Increased font size */
+    font-size: 1rem; 
     margin-top: 5px;
     display: flex;
     align-items: center;
-    display: none; /* Hide error messages by default */
+    display: none; 
 }
 
 .error-message.active {
-    display: flex; /* Show error message when active */
+    display: flex; 
 }
 
 .error-message::before {
@@ -94,11 +94,11 @@ body {
 .submit-button {
     background-color: #007bff;
     color: white;
-    padding: 12px 24px; /* Increased padding */
+    padding: 12px 24px; 
     border: none;
     border-radius: 4px;
     font-family: "Poppins", sans-serif;
-    font-size: 1.25rem; /* Increased font size */
+    font-size: 1.25rem; 
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -121,28 +121,28 @@ body {
 
 @media (min-width: 768px) {
     .title {
-        font-size: 3rem; /* Increased font size */
+        font-size: 3rem; 
     }
 
     .input-field {
-        font-size: 1.25rem; /* Increased font size */
+        font-size: 1.25rem;
     }
 
     .submit-button {
-        font-size: 1.375rem; /* Increased font size */
+        font-size: 1.375rem; 
     }
 }
 
 @media (min-width: 1024px) {
     .title {
-        font-size: 3.5rem; /* Increased font size */
+        font-size: 3.5rem; 
     }
 
     .input-field {
-        font-size: 1.375rem; /* Increased font size */
+        font-size: 1.375rem; 
     }
 
     .submit-button {
-        font-size: 1.5rem; /* Increased font size */
+        font-size: 1.5rem; 
     }
 }

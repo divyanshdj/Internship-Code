@@ -1,9 +1,21 @@
-## Task 1: HTML Structure and Basic ServerInteraction
-### Objective: Introduce the concept of server-side rendering and basic form submissions.
+# Task 1: HTML Structure and Basic Server Interaction
 
-### Steps:
-1. Create an HTML structure with forms for user input.
-2. Set up a simple Node.js server using Express.
-3. Create server-side endpoints to handle form submissions.
-4. Use server-side rendering (e.g., EJS) to dynamically generate HTML.
+## Steps to Run
+1. **Navigate to the project directory:**
+    ```bash
+    cd "Task 1"
+    ```
+2. **Install the Node Modules:**
+    ```bash
+    npm install
+    ```
+3. **Run the Project:**
+    ```bash
+    npm start
+    ```
+4. Open your web browser and go to [`http://localhost:3000`](http://localhost:3000)
+
+## Contact
+
+If you want to contact with me you can reach me at [**Linkedin**](https://www.linkedin.com/in/divyansh-jain-29712726b).
 

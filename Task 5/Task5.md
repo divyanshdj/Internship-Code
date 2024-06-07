@@ -1,9 +1,9 @@
-# Task 2: Inline Styles, Basic Interaction, and Server-Side Validation
+# Task 5: API Integration and Front-End Interaction
 
 ## Steps to Run
 1. **Navigate to the project directory:**
     ```bash
-    cd "Task 2"
+    cd "Task 5"
     ```
 2. **Install the Node Modules:**
     ```bash

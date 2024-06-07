@@ -3,20 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Design</title>
+    <title>Task 3 - Responsive Design</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      .h1-carousel {
+        font-size: 5vw;
+        font-weight: 600;
+      }
+
+      .p-carousel {
+        font-size: 2.5vw;
+        font-weight: 450;
+      }
+
+      @media (max-width: 768px) {
+        .h1-carousel {
+          font-size: 8vw;
+        }
+      }
+    </style>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
   </head>
+
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="./svg/adidas.svg" alt="Logo" height="30" />
+            <img src="./svg/adidas.svg" alt="Logo" height="35" />
           </a>
           <button
             class="navbar-toggler"
@@ -30,15 +53,15 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Men</a>
+                <a class="nav-link" href="#new">Men</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Women</a>
+                <a class="nav-link" href="#new">Women</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Kids</a>
@@ -112,9 +135,11 @@
             class="d-block w-100"
             alt="..."
           />
-          <div class="carousel-caption d-none d-md-block">
-            <h1>Welcome to Our Clothing Collection</h1>
-            <p>Explore our latest arrivals and find your perfect style.</p>
+          <div class="carousel-caption d-none d-md-block" data-aos="fade-down">
+            <h1 class="h1-carousel">Welcome to Our Clothing Collection</h1>
+            <p class="p-carousel">
+              Explore our latest arrivals and find your perfect style.
+            </p>
           </div>
         </div>
         <div class="carousel-item">
@@ -124,8 +149,10 @@
             alt="..."
           />
           <div class="carousel-caption d-none d-md-block">
-            <h1>New Season Essentials</h1>
-            <p>Discover the latest trends in fashion for this season.</p>
+            <h1 class="h1-carousel">New Season Essentials</h1>
+            <p class="p-carousel">
+              Discover the latest trends in fashion for this season.
+            </p>
           </div>
         </div>
         <div class="carousel-item">
@@ -135,8 +162,10 @@
             alt="..."
           />
           <div class="carousel-caption d-none d-md-block">
-            <h1>Explore Our Latest Collection</h1>
-            <p>Shop now and enjoy exclusive offers on our new arrivals.</p>
+            <h1 class="h1-carousel">Explore Our Latest Collection</h1>
+            <p class="p-carousel">
+              Shop now and enjoy exclusive offers on our new arrivals.
+            </p>
           </div>
         </div>
       </div>
@@ -160,230 +189,248 @@
       </button>
     </div>
 
-    <main>
-      <article>
-        <!-- Product Section -->
-        <section class="section product" id="arrival" aria-label="product">
-          <div class="container">
-            <h2 class="h2 section-title title text-center">
-              Explore new arrivals
-            </h2>
+    <article>
+      <!-- Product Section -->
+      <section class="section product" id="arrival" aria-label="product">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="h1-carousel m-4 section-title title text-center" id="new">
+            Explore new arrivals
+          </h1>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-1.png"
-                    class="card-img-top img-cover"
-                    alt="Short Sleeve Shirt"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Short Sleeve Shirt</a
-                      >
-                    </h5>
-                    <p class="card-text">$170.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
+          <div
+            class="row row-cols-1 row-cols-md-3 g-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/db5d7f5965d743a8b92d32bb61192ffc_faec/adidas_Basketball_Crew_Sweatshirt_Grey_IN4244_HM1.jpg"
+                  class="card-img-top img-cover"
+                  alt="Basketball Crew Sweatshirt"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Adidas Basketball Crew Sweatshirt</a
                     >
-                  </div>
+                  </h5>
+                  <p class="card-text">$170.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
                 </div>
               </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-2.png"
-                    class="card-img-top img-cover"
-                    alt="Dead Sunglasses"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Dead Sunglasses</a
-                      >
-                    </h5>
-                    <p class="card-text">$210.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/cc16d3fb03d54114ae9b545ce84516f6_9366/Y-3_Tailored_Wool_Coat_Black_IP5593_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="Y-3 TAILORED WOOL COAT"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Y-3 TAILORED WOOL COAT</a
                     >
-                  </div>
+                  </h5>
+                  <p class="card-text">$900.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
                 </div>
               </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-3.png"
-                    class="card-img-top img-cover"
-                    alt="Studios Trouser"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Studios Trouser</a
-                      >
-                    </h5>
-                    <p class="card-text">$90.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c637ba4c380e4a4180938acde7ab4df8_9366/Berlin_Running_Tee_Gender_Neutral_Black_IL2528_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="BERLIN RUNNING TEE"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >BERLIN RUNNING TEE</a
                     >
-                  </div>
+                  </h5>
+                  <p class="card-text">$70.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Featured Products Section -->
-        <section class="section feature" id="shopFP" aria-label="feature-label">
-          <div class="container">
-            <h2 class="h2 section-title title text-center">
-              Featured products
-            </h2>
+      <!-- Featured Products Section -->
+      <section class="section feature" id="shopFP" aria-label="feature-label">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="h1-carousel m-4 section-title title text-center" id="men">
+            Featured products
+          </h1>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-4.png"
-                    class="card-img-top img-cover"
-                    alt="Acne Baseball Cap"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Acne Baseball Cap</a
-                      >
-                    </h5>
-                    <p class="card-text">$80.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
+          <div
+            class="row row-cols-1 row-cols-md-3 g-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/b0cbfaec9bbc4d98845d7295577ff8ab_9366/Y-3_Organic_Cotton_Terry_Zip_Hoodie_Purple_IP7701_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="Terry_Zip_Hoodie_Purple"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Terry Zip Hoodie Purple</a
                     >
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-5.png"
-                    class="card-img-top img-cover"
-                    alt="Short Sleeve Shirt"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Short Sleeve Shirt</a
-                      >
-                    </h5>
-                    <p class="card-text">$170.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-6.png"
-                    class="card-img-top img-cover"
-                    alt="Garcons Parfums"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Garcons Parfums</a
-                      >
-                    </h5>
-                    <p class="card-text">$190.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-7.png"
-                    class="card-img-top img-cover"
-                    alt="Salomon Sneaker"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Salomon Sneaker</a
-                      >
-                    </h5>
-                    <p class="card-text">$450.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-8.png"
-                    class="card-img-top img-cover"
-                    alt="Ribbed Beanie Hat"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Ribbed Beanie Hat</a
-                      >
-                    </h5>
-                    <p class="card-text">$120.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card product-card">
-                  <img
-                    src="./images/product-9.png"
-                    class="card-img-top img-cover"
-                    alt="Acronym Khaki"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a href="#" class="text-decoration-none text-dark"
-                        >Acronym Khaki</a
-                      >
-                    </h5>
-                    <p class="card-text">$220.00</p>
-                    <a href="#" class="btn btn-dark"
-                      ><ion-icon name="bag"></ion-icon> Add To Cart</a
-                    >
-                  </div>
+                  </h5>
+                  <p class="card-text">$500.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
                 </div>
               </div>
             </div>
-
-            <div class="mt-4"></div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/0692c01b274a46639ad99ac1d3636117_9366/Y-3_3-Stripes_Long_Sleeve_Tee_Black_IR6268_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="Long_Sleeve_Tee_Black"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Long Sleeve Tee Black</a
+                    >
+                  </h5>
+                  <p class="card-text">$470.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4bd083c5782e4e7c8647c2f72d53d423_9366/Y-3_Real_Madrid_Cap_Black_IS5228_01_standard.jpg"
+                  class="card-img-top img-cover"
+                  alt="Real_Madrid_Cap"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Real Madrid Cap</a
+                    >
+                  </h5>
+                  <p class="card-text">$200.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/a6f4e0ba1924406cb7cba8a9f7b7a723_9366/Y-3_Ingesan_Knit_Top_Black_IP5590_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="Ingesan_Knit_Top_Black"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Ingesan Knit Top Black</a
+                    >
+                  </h5>
+                  <p class="card-text">$950.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/fb4420c6e6fa4f828dcdc7cb11bfeb23_9366/Y-3_Relaxed_Short_Sleeve_Tee_Purple_IP7686_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="Short_Sleeve_Tee_Purple"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Short Sleeve Tee Purple</a
+                    >
+                  </h5>
+                  <p class="card-text">$320.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000">
+              <div class="card product-card">
+                <img
+                  src="https://assets.adidas.com/images/w_600,f_auto,q_auto/0c51216aebe747d8bf44c4293b5b6c41_9366/Y-3_Graphic_Logo_Hoodie_White_IT7524_21_model.jpg"
+                  class="card-img-top img-cover"
+                  alt="Graphic_Logo_Hoodie_White"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="#" class="text-decoration-none text-dark"
+                      >Graphic Hoodie White</a
+                    >
+                  </h5>
+                  <p class="card-text">$620.00</p>
+                  <a href="#" class="btn btn-dark"
+                    ><ion-icon name="bag"></ion-icon> Add To Cart</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-      </article>
-    </main>
+
+          <div class="mt-4"></div>
+        </div>
+      </section>
+    </article>
 
     <footer class="footer mt-auto py-3 bg-dark">
-      <div class="container text-center text-white">
+      <div class="container text-center text-white fs-5">
         <div class="row">
           <div class="col-md-4">
-            <h5>About Us</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+            <h5 class="fs-5">About Us</h5>
+            <p>Adidas Clothing Brand...</p>
           </div>
           <div class="col-md-4">
             <h5>Customer Service</h5>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-white">Contact Us</a></li>
-              <li><a href="#" class="text-white">FAQ</a></li>
-              <li><a href="#" class="text-white">Shipping Information</a></li>
-              <li><a href="#" class="text-white">Returns & Exchanges</a></li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">FAQ</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Shipping</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Returns & Exchanges</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -414,11 +461,15 @@
         </div>
         <hr />
         <p class="text-center">
-          &copy; 2024 Clothing Store. All rights reserved.
+          &copy; 2024 Divyansh Jain. All rights reserved.
         </p>
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

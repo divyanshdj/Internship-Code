@@ -18,3 +18,8 @@
  Email: ERERERER@ERER.ER,
  Password:       
 },
+{
+ Username: divyanshdj,
+ Email: djboss8834@gmail.com,
+ Password: DivyNSH
+},
